@@ -1,0 +1,23 @@
+My code is divided into three parts
+
+The first part takes in the input string and tokenizes it. Each token is then simplifed down to a single character for simplicity state on a seperate char array. For example: NOT true; true AND false; 1 + 2 will be tokenized as !_t_;_t_v_t;_n_+_n where n indicates an integer, t indicates a boolean value, v indicates a boolean operator, + indicates an arithmatic operator, and ! is a negation operator. Once the string is tokenized the two go onto the second method.
+In this method, the algorithm will scan the specified expression through the tokenized string. A value prev holds the previous character and the value next holds what is to be expected. If what's expected is false, then the code sifts down into a maze of conditionals which sort out what error has occured. Once all is done and over, the method will print out the specified expression from the orignal string, indicating what when wrong, and in some cases, where, and count the errors together at the end. It will return 1 if the expression is a logical one, 2 if the expression is a arithmatic one, and 0 if it is neither.
+The final step takes the counters together and prints out the total expressions and logical counter and arithmatic counter together.
+
+Some of the testcases I used for my code are as followed:
+
+1 + 1
+1 +1;
+1 AND true; false + true
+true true true AND false false false
+NOT true Not true
+;1 + false;
+1 + + ;
+1 ++ 1
+1 + + 1
+1 * 1 1 1 1 1
+AND OR
+1 1 + 1;
+yes yes yes;
+;
+;;
